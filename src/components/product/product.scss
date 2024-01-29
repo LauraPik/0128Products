@@ -1,0 +1,27 @@
+.conatiner{
+    .product-info{
+        margin-left: 15rem;
+        gap: 5rem;
+        @media (max-width: 768px) {
+            margin-left: 1rem;
+            gap: 5rem;
+        }
+        .roduct-info--details{
+            margin: auto;
+        }
+        .product-info--picture{
+            
+            .product-info--picture-img{
+                height: 100%;
+                width: 100%;
+                @media (max-width: 768px) {
+                    height: 150%;
+                    width: 25rem;
+                }
+          
+                
+            }
+        }
+    }
+    
+}

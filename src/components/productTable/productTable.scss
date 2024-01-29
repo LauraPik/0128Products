@@ -1,0 +1,17 @@
+#root > table{
+    margin-top: 2rem;
+    @media (max-width: 768px) {
+       
+        width: min-content
+        
+      }
+    tbody{
+        @media (max-width: 768px) {
+       
+            width: min-content
+            
+          }
+        
+    
+    }
+}

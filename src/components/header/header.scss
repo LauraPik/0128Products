@@ -1,0 +1,18 @@
+.header-container-fluid{
+    background-color: black;
+    .header-container{
+        color: aliceblue;
+        display: flex;
+        justify-content: space-between;
+        // media peraso mazam ekranui skirta isdestyma
+        @media (max-width: 768px) {
+              display: contents;
+          }
+        margin-top: 1rem;
+        .navbar-brand{
+            color:white;
+        }
+           
+            
+          }
+    }
