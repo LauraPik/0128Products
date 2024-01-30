@@ -29,7 +29,7 @@ const Register = () =>{
             if (result.status === true) {
               localStorage.setItem('tokenOne', result.data.access_token);
               navigate('/login');
-              // window.location.reload(false);
+              
             } else {
               alert(result.message);
             }
