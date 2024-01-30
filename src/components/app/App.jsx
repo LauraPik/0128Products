@@ -9,15 +9,16 @@ import Reset from "../reset/Reset";
 import Footer from "../footer/Footer";
 
 
+
 function App(props) {
-
-
+ 
+  
   return (
     <>
-    
           <Router >
           <Header />
               <Routes>
+                
               <Route path="/" element={<Main />}/>
                 <Route path ="/register" element={<Register/>}/>
 
