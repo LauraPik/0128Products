@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/0129Products/static/css/main.c53c0d46.css",
-    "main.js": "/0129Products/static/js/main.ccb751ec.js",
-    "static/media/noImage.png": "/0129Products/static/media/noImage.000ff2e3917dbf02deff.png",
-    "index.html": "/0129Products/index.html",
-    "main.c53c0d46.css.map": "/0129Products/static/css/main.c53c0d46.css.map",
-    "main.ccb751ec.js.map": "/0129Products/static/js/main.ccb751ec.js.map"
+    "main.css": "//laurapik.github.io/0128Products/static/css/main.c53c0d46.css",
+    "main.js": "//laurapik.github.io/0128Products/static/js/main.6bd67233.js",
+    "static/media/noImage.png": "//laurapik.github.io/0128Products/static/media/noImage.000ff2e3917dbf02deff.png",
+    "index.html": "//laurapik.github.io/0128Products/index.html",
+    "main.c53c0d46.css.map": "//laurapik.github.io/0128Products/static/css/main.c53c0d46.css.map",
+    "main.6bd67233.js.map": "//laurapik.github.io/0128Products/static/js/main.6bd67233.js.map"
   },
   "entrypoints": [
     "static/css/main.c53c0d46.css",
-    "static/js/main.ccb751ec.js"
+    "static/js/main.6bd67233.js"
   ]
 }
