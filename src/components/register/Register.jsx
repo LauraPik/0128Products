@@ -28,7 +28,8 @@ const Register = () =>{
           .then(result => {
             if (result.status === true) {
               localStorage.setItem('tokenOne', result.data.access_token);
-              navigate('/login');
+              navigate('/');
+              window.location.reload(false);
               
             } else {
               alert(result.message);
