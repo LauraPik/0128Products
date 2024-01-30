@@ -1,12 +1,34 @@
 import UpdateProduct from './UpdateProduct';
-
+import { useEffect } from 'react';
 
 const ProductForTable = (props) =>{
-    
-    const deleteHandler = (id)=>{
-        console.log("Delete this", id);
-        //fetch to delete method [need ID, CHECK FOR CORRECT]
-    }
+
+const deleteHandler = (id) => {
+  console.log("Delete this", id);
+    fetch(`https://demo-api.ideabridge.lt/api/products/${props.id}`, {
+        method: "DELETE",
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+          "Authorization": `Bearer ${localStorage.getItem("tokenOne")}`
+        },
+      })
+      .then((response) => {
+        if (response.ok) {
+          console.log("Product deleted successfully");
+          // Update UI to reflect successful deletion
+        } else {
+          console.error("Error deleting product");
+          // Handle error appropriately
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching product", error);
+        // Handle error appropriately
+      });
+      window.location.reload(false);
+}
+
+
 
     return(
         <>
@@ -24,6 +46,8 @@ const ProductForTable = (props) =>{
         </>
 
     )
+
 }
+
 
 export default ProductForTable

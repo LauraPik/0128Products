@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
 import {  useState } from "react";
-
+import "../register/register.scss"
 
 const Register = () =>{
     const [crediantials, setCredentials] = useState({});
@@ -29,6 +29,7 @@ const Register = () =>{
             if (result.status === true) {
               localStorage.setItem('tokenOne', result.data.access_token);
               navigate('/');
+              window.location.reload(false);
             } else {
               alert(result.message);
             }
@@ -43,26 +44,26 @@ const Register = () =>{
 
     return(
         <>
-         <h2 className="m-3 text-center">Registruokis</h2>
-            <form >
-            <div className="form" >
+            <form  className="register-form">
+            <h2 className="m-3 text-center header">Registruokis</h2>
+            
             <div className="mb-3">
-                        <input type="email" name="email" className="form-control" placeholder="El.pastas" onChange={handleChange} />
+                        <input type="email" name="email" className="form-control register-form--name" placeholder="El.pastas" onChange={handleChange} />
                     </div>
                 <div className="mb-3">
-                    <input type="text" className="form-control" name="name" placeholder="Jusu vardas" onChange={handleChange} />
+                    <input type="text" className="form-control register-form--email" name="name" placeholder="Jusu vardas" onChange={handleChange} />
                 </div>
                 <div className="mb-3">
-                    <input type="password" className="form-control" name="password" placeholder="Slaptazodis" onChange={handleChange}/>
+                    <input type="password" className="form-control register-form--password" name="password" placeholder="Slaptazodis" onChange={handleChange}/>
                 </div>
                 <div className="mb-3">
-                    <input type="password" className="form-control" name="password_confirmation" placeholder="Slaptazodio patvirtinimas" onChange={handleChange}/>
+                    <input type="password" className="form-control register-form--password-reset" name="password_confirmation" placeholder="Slaptazodio patvirtinimas" onChange={handleChange}/>
                 </div>
-                <div className="mb-3"><button type="submit" onClick={handleSubmit}>Registruotis</button></div>
-                <div className="mb-3">
+                <div className="mb-3 register-form--button"><button type="submit" onClick={handleSubmit}>Registruotis</button></div>
+                <div className="mb-3 register-form--login">
                     <p>Turite paskyra?<Link to="/login">Galite prisijungti</Link></p>
                 </div>
-            </div>
+            
             </form>
         </>
     )

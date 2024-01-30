@@ -5,8 +5,8 @@ import Register from "../register/Register";
 import Login from "../login/Login";
 import Product from "../product/Product";
 import AddProduct from "../addProduct/AddProduct";
-
-
+import Reset from "../reset/Reset";
+import Footer from "../footer/Footer";
 
 
 function App(props) {
@@ -24,10 +24,12 @@ function App(props) {
                  <Route path="/modal" element={<AddProduct/>} />
 
                 <Route path ="/login" element={<Login/>}/>
-                <Route path="/show-product/:id" element={<Main/>}/>
-                
+                <Route path="/show-product/:id" element={<Product/>}/>
+                <Route path ="/password-reset" element={<Reset/>}/>
+              
       
               </Routes>
+              <Footer/>
             </Router>
       
     </>

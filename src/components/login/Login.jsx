@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../header/Header";
-// import { Store, useGlobalState } from "state-pool";
-// import {myGlobalParams, demoParam } from "../../myGlobalParams";
-// import demoParam from "../../myGlobalParams";
+import "../login/login.scss"
 
-// Store.setState("userToken", null);
+
 
 const Login = () =>{
     const [crediantials, setCredentials] = useState({});
@@ -60,30 +58,28 @@ const Login = () =>{
 
     return(
         <>
-         
-         <h2 className="m-3 text-center">Prisijunk</h2>
-        <form >
-        <div className="form" >
+        <div className="form login-form text-center" >
+        <h2 className="m-3 text-center text-center header">Prisijunk</h2>
             <div className="mb-3">
-                <div className="mb-3">
+                <div className="mb-3 login-form--email">
                     <input type="email" name="email" className="form-control" placeholder="El.pastas" 
                     onChange={handleChange}
                     />
                 </div>
             </div>
-            <div className="mb-3">
+            <div className="mb-3 login-form--password">
                 <input type="password" className="form-control" name="password" placeholder="Slaptazodis" 
                 onChange={handleChange}
                 />
             </div>
-            <div className="mb-3"><button type="button" onClick={handleLogin}>Prisijungti</button></div>
-            <div className="mb-3">
+            <div className="mb-3 login-form--button"><button type="button" onClick={handleLogin}>Prisijungti</button></div>
+            <div className="mb-3 login-form--register">
                 <p>Neturite paskyros ?<Link to="/register">Registruotis</Link></p>
             </div>
-        </div>
-        </form>
-        
-        
+            <div className="mb-3 login-form--passwordReset">
+                <p>Nepavyksta prisijungti?<Link to="/password-reset"> Priminti slaptazodį</Link></p>
+            </div>
+        </div>  
         </>
        
     )

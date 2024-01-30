@@ -1,23 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+
 .container{
     .promo-product{
         gap: 7rem;
         justify-content: center;
+        @media (max-width: 768px) {
+            gap: 1rem;
+        }
+  
         .promo-product--details{
             margin-top: 7rem;
+            h3{
+               
+                    font-family: "Roboto", sans-serif;
+                    font-weight: bold;
+                    font-size: 40px;
+                    
+    
+                
+                p{
+                    font-family: "Roboto", sans-serif;
+                    font-size: 20px;
+                    
+    
+                }
+            }
             .promo-product--button{
                 button{
                 border: aliceblue;
+                border: white;
+                background-color: white;
                 }
             }
         }
-        margin-bottom: 2rem;
+        
         
         .promo-product--image{
             margin-top: 2rem;
             max-width: 400px;
             height: 400px;
             .placeholder-image{
-                object-fit: cover;
+                object-fit: contain;
+                object-position: center left;
                 height: 100%;
                 width: 100%;
             }
@@ -28,11 +53,27 @@
 
 
    .list-product{
-    background-color: aqua;
+    // background-color: aqua;
         .list-product--details{
+            h3{
+               
+                font-family: "Roboto", sans-serif;
+                font-weight: bold;
+                font-size: 30px;
+                
+
+            
+            p{
+                font-family: "Roboto", sans-serif;
+                font-size: 20px;
+                
+
+            }
+        }
             .list-product--button{
                 button{
-                border: aliceblue;
+                border: white;
+                background-color: white;
                 }
             }
 
@@ -42,7 +83,8 @@
                 max-width: 200px;
                 height: 200px;
             .placeholder-image{
-                object-fit: cover;
+                object-fit: contain;
+                object-position: center left;
                 height: 100%;
                 width: 100%;
             }
@@ -63,5 +105,20 @@
         text-decoration: none;
         
 
+    }
+}
+
+div .pagination{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    button{
+        background-color: rgb(63, 73, 92);
+        border: transparent;
+       
+        color: white;
+        font-size: 16px;
+        line-height: 1.5;
     }
 }

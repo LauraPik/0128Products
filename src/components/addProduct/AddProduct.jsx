@@ -3,6 +3,7 @@ import {  useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ProductTable from "../productTable/ProductTable";
+import "../addProduct/addProduct.scss";
 
 
 const AddProduct = (props) =>{
@@ -44,6 +45,7 @@ const AddProduct = (props) =>{
     handleClose();
 
     console.log("resp", resp);
+    window.location.reload(false);
 
   }
   
@@ -77,7 +79,7 @@ const AddProduct = (props) =>{
                     <input type="text" name="description" placeholder="Aprasymas" className=" m-1 form-control" onChange={handleChange} />
               </div>
               <div className="mb-3">
-                    <input type="file" name="image" placeholder="Nuotrauka" accept="image/png, image/jpeg" onChange={(e) => {
+                    <input type="file" className='product-info--file-input' name="image" placeholder="Nuotrauka" accept="image/png, image/jpeg" onChange={(e) => {
                       console.log(e.target.files)
                       setImage((oldValue) => ({
                         ...oldValue,

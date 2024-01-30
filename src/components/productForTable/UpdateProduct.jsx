@@ -1,4 +1,3 @@
-import {Link, useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -45,7 +44,7 @@ const UpdateProduct = (props) =>{
     }, [props.productID]);
   
   const handleUpdate = async () => {   
-    // const formData = new FormData()
+   
     const formData = new URLSearchParams();
     formData.append("title", product.title)
     formData.append("price", parseFloat(product.price))
@@ -62,8 +61,9 @@ const UpdateProduct = (props) =>{
     });
 
     console.log("resp", resp);
-    handleClose();
+   
     window.location.reload(false);
+    handleClose();
 
   }
 
