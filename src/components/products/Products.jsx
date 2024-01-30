@@ -53,6 +53,8 @@ const Products = (props) =>{
       setPage(page-1);
       console.log("prev");
     }
+
+  
 /*
  356 | 354
  353 | 346
@@ -99,7 +101,7 @@ const Products = (props) =>{
                     </div>
                     <div className="col-3 promo-product--details">
                       <h3>{product.title.toUpperCase()}</h3>
-                      {<p>{product.description > 100 ? product.description.substring(0, 100) + "..." : product.description}</p>}
+                      {<p>{product.description.length  > 100 ? product.description.substring(0, 100) + "..." : product.description}</p>}
                       <p>{product.price}eur</p>
                     <div className="mb-3 promo-product--button">
                       <button><Link className='btn btn-primary' to={`/show-product/${product.id}`}>Placiau</Link></button>
@@ -122,7 +124,7 @@ const Products = (props) =>{
           </div>
           <div className="col-6 col-md list-product--details" key={product.id}>
             <h3>{product.title.toUpperCase()}</h3>
-            {<p>{product.description > 100 ? product.description.substring(0, 100) + "..." : product.description}</p>}
+            {<p>{product.description.length  > 100 ? product.description.substring(0, 100) + "..." : product.description}</p>}
             <p>{product.price}eur</p>
             <div className="mb-3 list-product--button">
                       <button><Link className='btn btn-primary' to={`/show-product/${product.id}`}>Placiau</Link></button>
