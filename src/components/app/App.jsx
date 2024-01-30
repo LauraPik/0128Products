@@ -15,7 +15,7 @@ function App(props) {
   return (
     <>
     
-          <Router basename="0129Products">
+          <Router >
           <Header />
               <Routes>
               <Route path="/" element={<Main />}/>
